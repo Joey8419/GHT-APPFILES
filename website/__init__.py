@@ -1,4 +1,7 @@
 from flask import Flask
+# from .views import views
+# from .auth import auth
+# from .model import db
 
 
 # Define a function:

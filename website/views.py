@@ -1,14 +1,9 @@
 from flask import Blueprint, render_template, request
-from model import Outbreak # Import the Outbreak class
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from .model import Outbreak, get_outbreaks_by_country_and_year, db  # Import the Outbreak class
 
 
-# Define SQLAlchemy engine and session
-engine = create_engine('sqlite:///outbreak.db')
-Session = sessionmaker(bind=engine)
-session = Session()
-
+# # With the Flask app and db created
+# from your_flask_app import db
 
 # Define that this file is the blueprint of the application that has a bunch of roots inside of it
 views = Blueprint('views', __name__)
